@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 
 # OpenAI API Anahtarını Buraya Yaz
-OPENAI_API_KEY = "your-api-key"  # sk-svcacct-cNvYpKZhEOgEjziNwJ_It3hIIUBPDIh-Koem_6q2s2DgmqCIn0Pnxx780iYnQSJT3BlbkFJaLmDnh1vtMN2ck1Iw9U7RhhsrYy4s-3XLT724KK5kFHnux4nLJ1s_62m0dWpRAA
+OPENAI_API_KEY = "your-api-key"  # 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
 
 openai.api_key = OPENAI_API_KEY
 
