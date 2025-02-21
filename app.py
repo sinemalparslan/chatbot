@@ -23,7 +23,7 @@ user_input = st.text_input("Bir kelime veya anlamını öğrenmek istediğin bir
 if st.button("Gönder") and user_input:
     with st.spinner("Yanıt alınıyor..."):
         response = openai.ChatCompletion.create(
-            model="gpt-4-turbo",
+            model="gpt-3.5-turbo",
             messages=[{"role": "system", "content": "Sen bir kelime öğrenme koçusun, kelimeleri açıkla ve örnekler ver."},
                       {"role": "user", "content": user_input}]
         )
