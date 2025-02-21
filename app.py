@@ -2,9 +2,9 @@ import streamlit as st
 import openai
 
 # OpenAI API Anahtarını Gir
-OPENAI_API_KEY = "your-api-key"  # Buraya OpenAI API anahtarını ekleyin
+OPENAI_API_KEY = "your-api-key"  # Buraya kendi OpenAI API anahtarını ekleyin
 
-client = openai.OpenAI(api_key=chatbot)
+openai.api_key = OPENAI_API_KEY
 
 # Streamlit Başlığı
 st.title("📝 Busy Bee Vocabulary Coach")
@@ -19,14 +19,14 @@ if "chat_history" not in st.session_state:
 # Mesaj boş değilse GPT'ye gönder
 if st.button("Gönder") and user_input:
     with st.spinner("Yanıt alınıyor..."):
-        response = client.chat.completions.create(
-            model="gpt-4-turbo",  # Yeni OpenAI API formatı
+        response = openai.ChatCompletion.create(
+            model="gpt-4-turbo",  # En güncel model
             messages=[
                 {"role": "system", "content": "Sen bir kelime öğrenme koçusun, kelimeleri açıkla ve örnekler ver."},
                 {"role": "user", "content": user_input}
             ]
         )
-        chatbot_response = response.choices[0].message.content
+        chatbot_response = response['choices'][0]['message']['content']
 
     st.success("Cevap alındı!")
     st.write(chatbot_response)
