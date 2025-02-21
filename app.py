@@ -2,7 +2,7 @@ import streamlit as st
 import openai
 
 # OpenAI API Anahtarını Gir
-OPENAI_API_KEY = "your-api-key"  # Buraya OpenAI API anahtarını ekleyin
+OPENAI_API_KEY = "sk-svcacct-cNvYpKZhEOgEjziNwJ_It3hIIUBPDIh-Koem_6q2s2DgmqCIn0Pnxx780iYnQSJT3BlbkFJaLmDnh1vtMN2ck1Iw9U7RhhsrYy4s-3XLT724KK5kFHnux4nLJ1s_62m0dWpRAA"  # Buraya OpenAI API anahtarını ekleyin
 
 client = openai.OpenAI(api_key=OPENAI_API_KEY)
 
